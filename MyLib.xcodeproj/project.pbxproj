@@ -15,6 +15,7 @@
 		A2C8604129E71C4E00DE3FE1 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2C8604029E71C4E00DE3FE1 /* Utils.swift */; };
 		A2C8604329E71D0E00DE3FE1 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = A2C8604229E71D0E00DE3FE1 /* Podfile */; };
 		A2C8604B29E76AEE00DE3FE1 /* MyLib.podspec in Resources */ = {isa = PBXBuildFile; fileRef = A2C8604A29E76AEE00DE3FE1 /* MyLib.podspec */; };
+		A2F9B00B29F15A3C004AD82D /* SimpleAlgorithms.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2F9B00A29F15A3C004AD82D /* SimpleAlgorithms.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +39,8 @@
 		A2C8604029E71C4E00DE3FE1 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		A2C8604229E71D0E00DE3FE1 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
 		A2C8604A29E76AEE00DE3FE1 /* MyLib.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = MyLib.podspec; sourceTree = "<group>"; };
+		A2F9B00A29F15A3C004AD82D /* SimpleAlgorithms.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleAlgorithms.swift; sourceTree = "<group>"; };
+		A2F9B04D29F170F8004AD82D /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B28D109E2B639DF6986C8043 /* Pods_MyLib.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyLib.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -89,6 +92,7 @@
 				A2C8602929E71B1000DE3FE1 /* MyLib.h */,
 				A2C8602A29E71B1000DE3FE1 /* MyLib.docc */,
 				A2C8604029E71C4E00DE3FE1 /* Utils.swift */,
+				A2F9B00A29F15A3C004AD82D /* SimpleAlgorithms.swift */,
 			);
 			path = MyLib;
 			sourceTree = "<group>";
@@ -113,6 +117,7 @@
 		EE4379E675D3A21F9D9E323D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				A2F9B04D29F170F8004AD82D /* Alamofire.framework */,
 				B28D109E2B639DF6986C8043 /* Pods_MyLib.framework */,
 			);
 			name = Frameworks;
@@ -256,6 +261,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A2C8602B29E71B1000DE3FE1 /* MyLib.docc in Sources */,
+				A2F9B00B29F15A3C004AD82D /* SimpleAlgorithms.swift in Sources */,
 				A2C8604129E71C4E00DE3FE1 /* Utils.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -405,6 +411,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 38EE5C23D64C2FF776650BCB /* Pods-MyLib.debug.xcconfig */;
 			buildSettings = {
+				BUILD_LIBRARY_FOR_DISTRIBUTION = NO;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
@@ -435,6 +442,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 35CF626D2FDB1894AD5E47EE /* Pods-MyLib.release.xcconfig */;
 			buildSettings = {
+				BUILD_LIBRARY_FOR_DISTRIBUTION = NO;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
