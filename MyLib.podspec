@@ -74,8 +74,13 @@ Pod::Spec.new do |spec|
   #
 
   # spec.platform     = :ios
-  #coder
-  spec.platform     = :ios
+  #coder:=======
+  #- ERROR | [iOS] swift: Swift support uses dynamic frameworks and is therefore only supported on iOS > 8.
+  #REF: https://github.com/CocoaPods/CocoaPods/issues/3225
+  #example -> s.platform     = :ios, "9.0"
+  #spec.platform     = :ios
+  spec.platform     = :ios, "9.0"
+  #============
   # spec.platform     = :ios, "5.0"
 
   #  When using multiple platforms
@@ -91,8 +96,9 @@ Pod::Spec.new do |spec|
   #  Supports git, hg, bzr, svn and HTTP.
   #
 
-  #coder: comment out
-  spec.source       = { :git => "https://github.com/websurfe/mylib.git", :tag => "#{spec.version}" }
+  #coder: tag issue
+  #spec.source       = { :git => "https://github.com/websurfe/mylib.git", :tag => "#{spec.version}" }
+  spec.source       = { :git => "https://github.com/websurfe/mylib.git" }
 
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
@@ -134,9 +140,13 @@ Pod::Spec.new do |spec|
   # spec.frameworks = "SomeFramework", "AnotherFramework"
   #coder
   #spec.framework = "Alamofire.framework"
+  #spec.frameworks = "MyLib.framework", "Alamofire.framework"
   
   #coder======
-  spec.vendored_frameworks = "MyLib.framework"
+  spec.vendored_frameworks = "MyLib.xcframework"
+  #spec.dependencies = "Alamofire.framework"
+  #spec.dependencies = 'Alamofire'
+  spec.dependency 'Alamofire'
   #===========
 
   # spec.library   = "iconv"
